@@ -1,0 +1,41 @@
+body,html{
+    font-family:'lato';
+    color: #0080ff;
+    position:relative;
+    overflow-x:hidden;
+    height:100%;
+    width: 100%;
+    background-color: whitesmoke;
+    background-image: url('http://www.thencn.com/wp-content/uploads/2018/02/Wiki-image.jpg');
+      background-size:     cover;       
+    background-position: center center;  
+    background-repeat: no-repeat;
+    
+}
+.search-icon:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(3); 
+}
+
+
+
+
+
+::-ms-clear {
+    display: none;
+  }
+  
+  .form-control-clear {
+    z-index: 10;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  .idlink{
+      color:#0080ff;
+      background-color:yellow;
+      opacity: 0.8;
+      
+  }
+

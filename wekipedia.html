@@ -1,0 +1,85 @@
+<html>
+<head>
+        
+      
+
+   <!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">  -->
+
+        <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+          crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    
+        <title>wekipedia</title>
+   <!-- <link rel="stylesheet" href="C:\Users\Manoj\Desktop\wekipedia-css.css" type="text/css">  -->
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+     <!-- Include the AngularJS library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+
+    <link href="./wikipedia-css.css" rel="stylesheet" type="text/css">
+    
+   <!-- <script src="C:\Users\Manoj\Desktop\wekipedia-js.js"></script>  -->
+    <script src="./wekipedia-app.js"></script>
+   <script src="./Wikipedia-MainController.js"></script>  
+
+</head>
+<body ng-app="myApp">
+
+<!--start header-->
+<header>
+    <div class="text-center">
+        <h1><i class="fab fa-wikipedia-w"></i>ekipedia Content Finder</h1>
+    </div>
+</header>
+<!--end header-->
+
+<!--search start-->
+<section>
+    <div class=" container text-center" ng-controller="MainController">
+        <h1><a href="#" class="ancrSearch"><i class="fa fa-search search-icon" id="idsearch"></i></a></h1>
+        <h1 id="idSearch">
+            <div class="row">
+              <div class="col-md-4 col-lg-3"></div>
+              <div class="col-md-4 col-lg-6 col-sm-12 col-xs-12 search-wrapper">
+                    <form>
+                            <div class="form-group ">
+                                    <input type="text" id="idipsearch" class="form-control search-box" placeholder="Wekipedia search..." type="submit"  
+                                     ng-model="ipsearch" ng-change="search()"> 
+                                   <!-- onchange="search()" --> 
+                                  <!-- <button type="submit" class="invisible" ng-click="search(ipsearch)"></button> -->
+                                 <span class="form-control-clear glyphicon glyphicon-remove form-control-feedback hidden"></span>
+                           
+                            </div>
+                    </form>
+              </div>
+              <div class="col-md-4 col-lg-4"></div>
+            </div>
+            
+        </h1>
+       
+        <div class="idlink rounded mt-5"ng-repeat="metadata in datas">
+                <br>
+                <h2><b>{{metadata.title}}</b></h2>
+                <br>
+                <p><b>{{metadata.extract}}</b></p>
+                <a href="{{metadata.thumbnail.source}}" target="_blank">Wekipedia link for {{metadata.title}}</a>
+        </div>
+
+        </div>
+    </div>
+</section>
+<!--search end-->
+
+
+<script>
+        
+    </script>
+
+</body>
+</html>
